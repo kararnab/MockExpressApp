@@ -1,0 +1,19 @@
+{
+  "name": "myexpressapp",
+  "version": "1.0.1",
+  "description": "Express project for mocking",
+  "main": "MockServer.js",
+  "scripts": {
+    "start": "node MockServer.js",
+    "startDev": "nodemon MockServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Arnab Kar",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

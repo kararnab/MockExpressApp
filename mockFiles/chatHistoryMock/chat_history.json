@@ -1,0 +1,50 @@
+{
+  "success":true,
+  "data":[
+      {
+        "msgId":"1",
+        "userPhoneNo":777893402,
+        "userName": "Akhilendra",
+        "msg":"Hi!",
+        "timestamp":1181500200000,
+        "isReveived":true
+      },
+      {
+        "msgId":"2",
+        "userPhoneNo":777893402,
+        "userName": "Akhilendra",
+        "msg":"Hello! How are you?",
+        "timestamp":1181500600000,
+        "isReveived":"false",
+        "deliveryStatus":"delivered"
+      },
+      {
+        "msgId":"3",
+        "userPhoneNo":777893402,
+        "userName": "Akhilendra",
+        "msg":"Its been a long time",
+        "timestamp":1181500700000,
+        "isReveived":"false",
+        "deliveryStatus":"sent"
+      },
+      {
+        "msgId":"4",
+        "userPhoneNo":777893402,
+        "userName": "Akhilendra",
+        "msg":"Lets meet a day",
+        "timestamp":1181500750000,
+        "isReveived":"true"
+      },
+      {
+        "msgId":"5",
+        "userPhoneNo":8971444210,
+        "userName": "Mom",
+        "msg":"Hi",
+        "timestamp":1181500900000,
+        "isReveived":"false",
+        "deliveryStatus":"received"
+      }
+
+  ],
+  "msg":"Recovery success"
+}

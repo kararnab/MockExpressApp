@@ -1,0 +1,22 @@
+<html>
+
+<head>
+    <title>Mock Dashboard</title>
+    <script>
+        function logout() {
+            if (window && window.Android && window.Android.logout) {
+                window.Android.logout();
+            } else {
+                alert('Unsupported Operation')
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Dashboard</h1>
+    <p>This is a demo dashboard</p>
+    <button onclick="logout()">Logout</button>
+</body>
+
+</html>
