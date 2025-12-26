@@ -1,0 +1,6 @@
+{
+  "orders": [
+    { "id": 101, "status": "pending" },
+    { "id": 102, "status": "completed" }
+  ]
+}

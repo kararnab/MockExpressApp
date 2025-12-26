@@ -1,44 +1,92 @@
-Express Mock App
-==========
+# 🎭 Fun Mock Server with Rule-Engine ChatBot
 
-This is a mocker app built using [express.js](https://expressjs.com/) to support the initial works of my Android projects.
+A lightweight Express-based mock server with file-based mock APIs and a surprisingly smart rule-engine chatbot.
 
-Let's get started
-----
-`nodemon` redeploys the file in server when the source code changes. Thus we don't have to manually restart the server again and again
-
-**Environment**
-
-Node version `18.12.0`
+Built for:
+- local development
+- frontend integration testing
+- demos & PoCs
+- having a little fun 😄
 
 
-Installing **Nodemon**
-----
-Just use *nodemon* instead of node to run your code, and now your process will automatically restart when your code changes. To install, get node.js, then from your terminal run:
+-[X] No databases.
+-[X] No ML.
+-[X] No external services.
 
-`npm install -g nodemon`
+Just **deterministic, explainable logic**.
 
-Running the server in dev mode
-----
-`yarn startDev`
+## ✨ Features
 
+### 🧪 Mock API Server
+- Serve custom JSON responses from files
+- Folder-based mocks (/mock/:folder/:file)
+- Hot-editable mock data (no rebuilds)
 
-## Mock cURLs
-1. Login
-```curl --location --request POST 'http://localhost:8080/login' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "password": "1234"
-}'
+### 🤖 Rule-Engine Chat Bot
+
+- WebSocket-based chat (/chat)
+- Intent detection (salutation, help, identity, goodbye, etc.)
+- Confidence scoring
+- Typo & misspelling tolerance
+- Deterministic response variation
+- Session memory (conversation awareness)
+- Easter eggs 🥚
+
+### 🧠 “Smart, not magical”
+
+- Fully deterministic (QA-friendly)
+- Explainable decisions
+- No AI hallucinations
+- Easy to extend with new intents
+
+### 🧠 How the Bot Thinks
+
+The bot uses classic intent-based logic, not AI.
+
+#### Intent Detection
+
+- Exact matches
+- Partial phrase matches
+- Fuzzy matching (handles typos)
+- Confidence Scoring
+- Phrase strength
+- Context awareness
+- Session continuity
+
+#### Intent Flow Awareness
+Some transitions make sense:
+- SALUTATION → HELP
+- HELP → BOT_IDENTITY
+
+The bot boosts confidence when the conversation flows naturally.
+
+---
+
+## Usage
+
+### Chat Bot Usage (WebSocket)
+
+Connect to
+```bash
+ws://localhost:3000/chat
+```
+Example Conversation
+```vbnet
+Client: Hi
+Bot: Hello! How may I help you today?
+
+Client: can you help me?
+Bot: Sure! You can ask me who I am, or tell me what you need help with.
+
+Client: whu r u
+Bot: I think I can help. I am RuleEngineBot, here to assist you.
+
+Client: bye
+Bot: See you later!
 ```
 
-2. Logout
-```
-curl --location --request POST 'http://localhost:8080/logout' \
---header 'Content-Type: application/json'
-```
+### Open Dashboard static page
 
-3. Dashboard
 ```
 curl --location --request GET 'http://localhost:8080/dashboard.html'
 ```
